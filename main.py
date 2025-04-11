@@ -15,7 +15,7 @@ MODEL = 'llama3-70b-8192'
 conversation = [
     {
         "role": "system",
-        "content": "You are a chat bot designed only to answer questions about footballer Christiano Ronaldo. You do not know anything else. If someone asks questions on topics apart from Christiano Ronaldo, just say you don't know."
+        "content": "You are a chat bot designed only to answer questions about Cricketer Sachin Tendulkar. You do not know anything else. If someone asks questions on topics apart from Sachin Tendulkar, just say you don't know."
     }
 ]
 
@@ -45,7 +45,7 @@ def get_groq_response(question):
 st.title("Christiano Ronaldo Chatbot")
 
 # Display an image placeholder
-st.image("ronaldo.jpeg", width=700, caption="Christiano Ronaldo")
+st.image("sachin.jpeg", width=700, caption="Christiano Ronaldo")
 
 # Adjust CSS for padding and text wrapping
 st.markdown("""
@@ -86,7 +86,7 @@ if st.button("Send"):
 
 # Display conversation
 user_profile_pic = "profile.png"
-assistant_profile_pic = "user.png"
+assistant_profile_pic = "assistant.png"
 for message in st.session_state.conversation:
     if message["role"] == "system":
         st.image(assistant_profile_pic, width=30, output_format='PNG')
